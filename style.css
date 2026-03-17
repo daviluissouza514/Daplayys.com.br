@@ -1,0 +1,135 @@
+:root {
+  --bg: #0b0014;
+  --card: #1a0033;
+  --text: #ffffff;
+  --accent: #ff2fd6;
+  --accent2: #00f7ff;
+}
+
+body.light {
+  --bg: #f6eaff;
+  --card: #ffffff;
+  --text: #12001f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a0033, var(--bg));
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 25px rgba(255,47,214,0.8);
+}
+
+header p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+nav {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  font-family: 'Bangers', cursive;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text);
+  text-shadow: 0 0 8px rgba(0,247,255,0.7);
+}
+
+nav a:hover {
+  color: var(--accent2);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: linear-gradient(160deg, #22004d, #12001f);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow:
+    0 0 0 2px rgba(255,47,214,0.4),
+    0 25px 60px rgba(0,0,0,0.6);
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 0 0 2px rgba(0,247,255,0.9),
+    0 35px 70px rgba(0,0,0,0.7);
+}
+
+.card h2 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 18px;
+  margin-right: 10px;
+  padding: 12px 22px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: #000;
+  border-radius: 16px;
+  text-decoration: none;
+  font-family: 'Bangers', cursive;
+  font-size: 1.1rem;
+  box-shadow: 0 0 25px rgba(255,47,214,0.8);
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(0,247,255,1);
+}
+
+footer {
+  text-align: center;
+  padding: 35px;
+  opacity: 0.6;
+}
+
+.toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  padding: 16px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 30px rgba(255,47,214,0.9);
+}
